@@ -1,3 +1,3 @@
 #include "imu.hpp"
 
-SRIMB_Topic<ImuData> topic_imu;
+SRIMB_Topic<ImuData> topic_imu[IMU_INSTANCES];
