@@ -6,7 +6,7 @@ struct SRIMB_Sub {
 };
 
 template<typename T>
-inline void uorb_publish(SRIMB_Topic<T>& topic, const T& data, uint64_t now)
+inline void srimb_publish(SRIMB_Topic<T>& topic, const T& data, uint64_t now)
 {
     topic.data = data;
     topic.timestamp = now;
@@ -14,7 +14,7 @@ inline void uorb_publish(SRIMB_Topic<T>& topic, const T& data, uint64_t now)
 };
 
 template<typename T>
-inline bool uorb_copy(SRIMB_Topic<T>& topic, SRIMB_Sub& sub, T& out, uint64_t& timestamp ) {
+inline bool srimb_copy(SRIMB_Topic<T>& topic, SRIMB_Sub& sub, T& out, uint64_t& timestamp ) {
     if (sub.last_generation == topic.generation)
         return false;
 
