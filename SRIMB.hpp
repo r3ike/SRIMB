@@ -13,7 +13,7 @@ private:
     // aggiungere array con le callback
 
     // Metodo che chiama tutte le callbak relative a quel topic
-    void _notify_all(){
+    void notify_all(){
 
     }
 public:
@@ -21,7 +21,7 @@ public:
     ~SRIMB();
 
     void publish() {
-        _notify_all();
+        notify_all();
     }
 
     void poll(){
